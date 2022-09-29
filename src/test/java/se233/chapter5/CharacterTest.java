@@ -103,6 +103,7 @@ public class CharacterTest {
         assertTrue("Controller: Up key pressing is acknowledged", platformUnderTest.getKeys().isPressed(KeyCode.W));
         assertTrue("Model: Character is in jumping state", isJumping.getBoolean(characterUnderTest));
     }
+    // EXERCISE 3
     @Test
     public void characterJumpWhenNotOnTheGroundAfterTheUpKeyIsPressed() throws InvocationTargetException, IllegalAccessException, NoSuchFieldException {
         Character characterUnderTest = characterListUnderTest.get(0);
@@ -118,6 +119,7 @@ public class CharacterTest {
         assertTrue("Controller: Up key pressing is acknowledged", platformUnderTest.getKeys().isPressed(KeyCode.W));
         assertFalse("Model: Character is not in jumping state", isJumping.getBoolean(characterUnderTest));
     }
+    // EXERCISE 4
     @Test
     public void characterReachGameWallAfterHoldingLeftKey() throws InvocationTargetException, IllegalAccessException, NoSuchFieldException {
         Character characterUnderTest = characterListUnderTest.get(0);
@@ -135,6 +137,7 @@ public class CharacterTest {
         characterUnderTest.checkReachGameWall();
         assertEquals("Model: Character stops at a border", 0, characterUnderTest.getX());
     }
+    // EXERCISE 5
     @Test
     public void character1CollidesWithCharacter2AfterCharacter2LeftKeyIsPressed() throws InvocationTargetException, IllegalAccessException, NoSuchFieldException {
         Character characterUnderTest = characterListUnderTest.get(0);
@@ -150,6 +153,7 @@ public class CharacterTest {
         assertEquals("Model: Character 2 stops at Character 1", characterUnderTest.getX()+Character.CHARACTER_WIDTH, characterUnderTest2.getX());
         assertEquals("Model: Character 1 stops at Character 2", characterUnderTest2.getX(), characterUnderTest.getX()+Character.CHARACTER_WIDTH);
     }
+    // EXERCISE 6
     @Test
     public void character2RespawnedAfterCharacter1Stomped() throws InvocationTargetException, IllegalAccessException, NoSuchFieldException {
         Character characterUnderTest = characterListUnderTest.get(0);
