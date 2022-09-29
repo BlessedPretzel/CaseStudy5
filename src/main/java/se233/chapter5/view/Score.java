@@ -19,4 +19,5 @@ public class Score extends Pane {
     public void setPoint(int score) {
         this.point.setText(Integer.toString(score));
     }
+
 }

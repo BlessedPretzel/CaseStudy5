@@ -33,6 +33,7 @@ public class Platform extends Pane {
         scoreList.add(new Score(Platform.WIDTH-60, GROUND + 30));
         getChildren().add(backgroundImg);
         getChildren().addAll(characterList);
+        getChildren().addAll(scoreList);
     }
     public ArrayList<Character> getCharacterList() {
         return characterList;
